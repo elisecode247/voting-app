@@ -1,0 +1,34 @@
+{
+  "name": "voting-app",
+  "version": "0.0.1",
+  "description": "Users create polls.",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elisecode247/voting-app.git"
+  },
+  "homepage": "https://voting-app-elisecode247.c9users.io/",
+  "bugs": "https://voting-app-elisecode247.c9users.io/issues",
+  "keywords": [
+    "MongoDB",
+    "Mongoose",
+    "full stack",
+    "Express",
+    "Node",
+    "javascript",
+    "boilerplate"
+  ],
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "elisecode247",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "express": "^4.14.0",
+    "express-session": "^1.11.3",
+    "mongoose": "^4.1.0",
+    "passport": "^0.3.0",
+    "passport-github": "^1.0.0"
+  }
+}

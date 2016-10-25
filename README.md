@@ -4,4 +4,4 @@
 Instructions for project are here: https://www.freecodecamp.com/challenges/build-a-voting-app
 
 
-Clementine.js FCC Boilerplate
+Using the Clementine.js FCC Boilerplate

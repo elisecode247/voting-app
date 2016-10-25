@@ -1,0 +1,9 @@
+extends layout
+block page
+  - var menu = 'index'
+block content
+  h1 Latest Polls
+  p Select a poll to see the results and vote, or sign-in to make a new poll.
+  ul.list-group
+block scripts
+  script(type='text/javascript', src='controllers/latestPollsController.client.js')

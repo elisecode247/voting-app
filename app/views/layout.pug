@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title Voting App
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(charset="UTF-8")
+    meta(name="description" content="users can log into their account and create public polls")
+    meta(name="keywords" content="HTML,CSS,JavaScript,c9,Heroku,Pug,Jade,Sass,JQuery,MongoDB,Mongo,Mongoose,Node,Node.js")
+    meta(name="author" content="elisecode247")
+    link(rel="shortcut icon" href="public/img/favicon.ico")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
+  body
+    .container
+      block page
+      block header
+        include includes/menu
+      .jumbotron
+         block content
+      block footer
+        include includes/footer
+    script(type='text/javascript', src='common/ajax-functions.js')
+  if (loggedIn === true)
+    script(type='text/javascript', src='controllers/userController.client.js') 
+  block scripts

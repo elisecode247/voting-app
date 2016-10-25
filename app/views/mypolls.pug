@@ -1,0 +1,11 @@
+extends layout
+block page
+  - var menu = 'mypolls'
+block content
+  h1 My Polls
+  p Select a poll to see the results and vote, or make a 
+    a(href='/formaddpoll') new poll
+    | .
+  ul.list-group
+block scripts
+  script(type='text/javascript', src='controllers/myPollsController.client.js')

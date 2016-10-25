@@ -1,0 +1,22 @@
+extends layout
+block page
+  - var menu = 'polldetails'
+block content
+  h1
+    span#pollTitle ...loading
+  a(class="btn btn-social btn-twitter",  href="https://twitter.com/share", data-show-count="false",target="_blank", title="Share this poll on Twitter")
+    span(class="fa fa-twitter") 
+    | Share on Twitter
+  form(action="/", method="get" role="form")
+    .form-group
+      label(for='choices') I am voting for:
+      select(id='choices', class="form-control form-control-lg")
+        if (loggedIn === true)
+          option(selected=false) Choose something else
+    button(type='submit', class="btn btn-primary btn-vote") Vote
+  svg
+block scripts
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.0.0/bootstrap-social.min.css")
+  script(src="https://use.fontawesome.com/610b820b5f.js")
+  script(src="https://d3js.org/d3.v4.min.js")
+  script(type='text/javascript', src="controllers/chartController.client.js")

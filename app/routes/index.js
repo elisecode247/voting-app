@@ -7,10 +7,12 @@ var bodyParser = require('body-parser');
 module.exports = function(app, passport) {
   
   var pollsHandler = new PollsHandler();
-  var urlencodedParser = bodyParser.urlencoded({ extended: false }) 
+  var urlencodedParser = bodyParser.urlencoded({ extended: true }) 
   
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
+      req.loggedIn = true;
+      req.displayName = req.user.github.displayName;
       return next();
     }
     else {
@@ -21,6 +23,8 @@ module.exports = function(app, passport) {
   function isLoggedInOptional(req,res,next){
     if (req.isAuthenticated()) {
       req.loggedIn = true;
+      req.displayName = req.user.github.displayName;
+      req.userId = req.user.github.id;
     } else {
       req.loggedIn = false;
     }
@@ -30,7 +34,7 @@ module.exports = function(app, passport) {
   app.route('/')
     .get(isLoggedInOptional, function(req, res) {
       res.render('index', {
-        loggedIn: req.loggedIn
+        loggedIn: req.loggedIn, displayName: req.displayName
       });
     });
 
@@ -50,14 +54,14 @@ module.exports = function(app, passport) {
   app.route('/mypolls')
     .get(isLoggedIn, function(req, res) {
       res.render('mypolls', {
-        loggedIn: true
+        loggedIn: req.loggedIn, displayName: req.displayName
       });
     });
 
   app.route('/formaddpoll')
     .get(isLoggedIn, function(req, res) {
       res.render('formaddpoll', {
-        loggedIn: true
+        loggedIn: req.loggedIn, displayName: req.displayName
       });
     })
 
@@ -65,7 +69,7 @@ module.exports = function(app, passport) {
   app.route('/polldetails')
     .get(isLoggedInOptional, function(req, res) {
       res.render('polldetails', {
-        loggedIn: req.loggedIn
+        loggedIn: req.loggedIn, displayName: req.displayName
       });
     });  
 
@@ -78,17 +82,18 @@ module.exports = function(app, passport) {
       failureRedirect: '/login'
     }));
 
-  app.route('/api/:id')
-    .get(isLoggedIn, function(req, res) {res.json(req.user);})
+  app.route('/api/latestPolls')
+    .get(pollsHandler.getLatestPolls);
 
 
   app.route('/api/poll/:pollId')
     .get(urlencodedParser,pollsHandler.getPollDetails)
-    .post(urlencodedParser,pollsHandler.addPoll)
+    .post(isLoggedInOptional,urlencodedParser,pollsHandler.castVote)
     .delete(urlencodedParser,pollsHandler.deletePoll);
+    
 
-  app.route('/api/latestpolls')
-    .get(pollsHandler.getLatestPolls)
-
+  app.route('/api/:id')
+    .get(isLoggedIn, function(req, res) {res.json(req.user);}) 
+    .post(urlencodedParser,pollsHandler.addPoll)
 };
 

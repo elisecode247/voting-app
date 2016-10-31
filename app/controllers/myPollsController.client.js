@@ -16,14 +16,15 @@
         '</a> <button type="button" class="btn btn-danger btn-delete" id="' +
         value._id + '">Delete</button>  </li>');
       $('#' + value._id).on('click', function() {
-          var r = confirm("Are you sure you want to delete this poll?");
-          if (r === true){
-           ajaxFunctions.ajaxRequest('DELETE', pollApiUrl+ value._id, function () {
-             ajaxFunctions.ajaxRequest('GET', userPollsApiUrl, showMyPolls);
-           })
-          }
+        var r = confirm("Are you sure you want to delete this poll?");
+        if (r === true) {
+          ajaxFunctions.ajaxRequest('DELETE', pollApiUrl + value._id, function() {
+            ajaxFunctions.ajaxRequest('GET', userPollsApiUrl, showMyPolls);
+          })
+        }
       })
-    })}
+    })
+  }
   ajaxFunctions.ready(ajaxFunctions.ajaxRequest('GET', userPollsApiUrl, showMyPolls));
 
 

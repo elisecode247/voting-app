@@ -15,8 +15,8 @@ var User = new Schema({
        _id: false,
        answer: String,
        votes: Number
-     }
-       ]
+     }],
+     voters: [String]
    }]
 });
 

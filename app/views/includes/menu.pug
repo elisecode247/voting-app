@@ -18,11 +18,11 @@ nav.navbar.navbar-default.navbar-static-top
             a.nav-link(href="/mypolls") My Polls
           li.dropdown
             a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false")
-              span(id="display-name", class="profile-value")
+              span(id="display-name", class="profile-value") #{displayName}
               span.caret
             ul.dropdown-menu
               li
                 a(href="/logout") Log out
         else
           li.nav-item
-            a.nav-link(href='/auth/github') Log in
+            a.nav-link(href='/auth/github') Log in with GitHub

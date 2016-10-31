@@ -4,7 +4,7 @@ block page
 
 block content
   h1 Create a New Poll
-  form(id="formAddPoll", method="post", action="/api/poll/:id", role="form")
+  form(id="formAddPoll", method="post", action="/api/:id", role="form")
     .form-group
       label(for='question') Question
       input(type="text", class='form-control', id='question', name="pollName" placeholder='Question')

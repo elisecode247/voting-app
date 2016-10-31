@@ -2,17 +2,21 @@ extends layout
 block page
   - var menu = 'polldetails'
 block content
-  h1
-    span#pollTitle ...loading
-  a(class="btn btn-social btn-twitter",  href="https://twitter.com/share", data-show-count="false",target="_blank", title="Share this poll on Twitter")
-    span(class="fa fa-twitter") 
-    | Share on Twitter
-  form(action="/", method="get" role="form")
+  h1#pollTitle
+  a(href="https://twitter.com/share", class="btn btn-social-icon btn-twitter")
+    span(class="fa fa-twitter")
+  a(class="btn btn-social-icon btn-facebook", href="#", onclick="window.location = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location); return false")
+    span(class="fa fa-facebook")
+  a(href="https://www.reddit.com/submit", class="btn btn-social-icon btn-reddit", onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false")
+    span(class="fa fa-reddit")
+  form(role="form")
     .form-group
-      label(for='choices') I am voting for:
-      select(id='choices', class="form-control form-control-lg")
+      label(for='choices', id='labelChoices') I am voting for:
+      select(id='choices', class="form-control form-control-lg", name='choices')
         if (loggedIn === true)
           option(selected=false) Choose something else
+      label(for='otherOption', id="labelOtherOption") Vote with my own option:
+      input(type="text", name="otherOption", value="", id="otherOption")
     button(type='submit', class="btn btn-primary btn-vote") Vote
   svg
 block scripts

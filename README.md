@@ -1,7 +1,12 @@
-## Overview
+# Voting Web App
 
-###Build a Voting App
-Instructions for project are here: https://www.freecodecamp.com/challenges/build-a-voting-app
+Demo: https://lit-caverns-93830.herokuapp.com
 
+Project and user stories: https://www.freecodecamp.com/challenges/build-a-voting-app
 
-Using the Clementine.js FCC Boilerplate
+The project began on October 17, 2016.
+
+Learned and Applied: 
+* Mongodb
+* Pug
+* Restful APIs

@@ -4,11 +4,11 @@ block page
 
 block content
   h1 Create a New Poll
-  form(id="formAddPoll", method="post", action="/api/:id", role="form")
+  form(id="formAddPoll", method="post", action="/api/:id")
     .form-group
       label(for='question') Question
       input(type="text", class='form-control', id='question', name="pollName" placeholder='Question')
     .form-group
       label(for='answers') Answers (separated by line)
-      textarea(class='form-control', id='answers', name="pollOptions" rows='10', placeholder='Option 1\nOption 2\nOption 3')
+      textarea(class='form-control', id='answers', name="pollOptions" rows='10')
     button(class="btn btn-default btn-create", type="submit") Create

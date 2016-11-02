@@ -1,0 +1,25 @@
+body {
+  background-color: #FFBC72;
+  color: #222; }
+
+a {
+  color: #1776B6; }
+
+.jumbotron .h1, .jumbotron h1 {
+  color: #00BED1; }
+
+.list-group-item, .btn {
+  border-color: #00BED1; }
+
+.form-control {
+  border-color: #00BED1; }
+
+.list-group-item .btn-danger {
+  border: 0;
+  text-align: right;
+  margin: 0 auto; }
+
+footer {
+  text-align: center; }
+
+/*# sourceMappingURL=base.css.map */

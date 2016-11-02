@@ -1,0 +1,32 @@
+@import "variables.scss";
+
+body {
+  background-color: $color__background;
+  color: $color__font;
+}
+
+a {
+  color: $color__link;
+}
+
+.jumbotron .h1, .jumbotron h1 {
+  color: $color__accent;
+}
+
+.list-group-item, .btn  {
+  border-color: $color__accent;
+}
+
+.form-control {
+  border-color: $color__accent;
+}
+
+.list-group-item .btn-danger {
+    border: 0;
+    text-align: right;
+    margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+}

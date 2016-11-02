@@ -1,0 +1,132 @@
+"polls" : [
+        {
+                "question" : "What is your favorite animal?",
+                "_id" : new ObjectId(),
+                "voters" : [
+                        "12992182",
+                        "69.255.15.115"
+                ],
+                "answers" : [
+                        {
+                                "votes" : 445,
+                                "answer" : "Dog"
+                        },
+                        {
+                                "votes" : 55,
+                                "answer" : "Cat"
+                        },
+                        {
+                                "votes" : 23,
+                                "answer" : "Mouse"
+                        },
+                        {
+                                "votes" : 83,
+                                "answer" : "Hamster"
+                        },
+                        {
+                                "votes" : 75,
+                                "answer" : "Rat"
+                        },
+                        {
+                                "votes" : 100,
+                                "answer" : "Chinchilla"
+                        },
+                        {
+                                "votes" : 45,
+                                "answer" : "Rabbit"
+                        },
+                        {
+                                "votes" : 75,
+                                "answer" : "Hedgehog"
+                        },
+                        {
+                                "votes" : 24,
+                                "answer" : "Lion"
+                        }
+                ]
+        },
+        {
+                "question" : "Where are you from?",
+                "_id" : new ObjectId(),
+                "voters" : [
+                        "12992182",
+                        "69.255.15.115"
+                ],
+                "answers" : [
+                        {
+                                "votes" : 15,
+                                "answer" : "United States"
+                        },
+                        {
+                                "votes" : 1,
+                                "answer" : "South Korea"
+                        },
+                        {
+                                "votes" : 3,
+                                "answer" : "China"
+                        },
+                        {
+                                "votes" : 5,
+                                "answer" : "Mexico"
+                        },
+                        {
+                                "votes" : 11,
+                                "answer" : "Canada"
+                        },
+                        {
+                                "votes" : 2,
+                                "answer" : "India"
+                        },
+                        {
+                                "votes" : 1,
+                                "answer" : "United Kingdom"
+                        }
+                ]
+        },
+        {
+                "question" : "What is your favorite holiday?",
+                "_id" : new ObjectId(),
+                "voters" : [
+                        "12992182",
+                        "69.255.15.115"
+                ],
+                "answers" : [
+                        {
+                                "votes" : 10,
+                                "answer" : "New Year's Eve"
+                        },
+                        {
+                                "votes" : 12,
+                                "answer" : "Valentine's Day"
+                        },
+                        {
+                                "votes" : 5,
+                                "answer" : "St. Patrick's Day"
+                        },
+                        {
+                                "votes" : 7,
+                                "answer" : "Easter"
+                        },
+                        {
+                                "votes" : 3,
+                                "answer" : "Labor Day"
+                        },
+                        {
+                                "votes" : 2,
+                                "answer" : "Memorial Day"
+                        },
+                        {
+                                "votes" : 20,
+                                "answer" : "Halloween"
+                        },
+                        {
+                                "votes" : 34,
+                                "answer" : "Thanksgiving"
+                        },
+                        {
+                                "votes" : 44,
+                                "answer" : "Christmas"
+                        }
+                ]
+        }
+]

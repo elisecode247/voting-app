@@ -9,9 +9,9 @@
     var pollsObject = JSON.parse(data).polls;
     $(".list-group").empty();
     $.each(pollsObject, function(index, value) {
-      $(".list-group").append("<li class=\"list-group-item\"><a href=\"" +
+      $(".list-group").append("<li class=\"list-group-item clearfix\"><a href=\"" +
         pollDetailsUrl + value._id + "\">" + value.question +
-        "</a><button type=\"button\" class=\"btn btn-danger\" id=\"" + 
+        "</a><button type=\"button\" class=\"btn btn-danger btn-sm pull-right\" id=\"" + 
         value._id + "\">Delete</button></li>");
       $("#" + value._id).on("click", function() {
         var r = confirm("Are you sure you want to delete this poll?");

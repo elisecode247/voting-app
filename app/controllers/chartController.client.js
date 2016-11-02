@@ -134,7 +134,7 @@
   });
 
   $("form").change(function() {
-    if ($("#choices option:selected").text() === "Write your own option.") {
+    if ($("#choices option:selected").text() === "Choose something else") {
       $("#otherOption").show();
       $("#labelOtherOption").show();
     } else {

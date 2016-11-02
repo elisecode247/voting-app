@@ -1,0 +1,9 @@
+.nav-link--sign-in {
+  background-color: #00BED1 !important;
+  color: white !important; }
+
+.navbar-default {
+  border: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  overflow: hidden; }
